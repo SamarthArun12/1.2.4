@@ -13,3 +13,6 @@
     - **Answer**: We place the door approximately 10 pixels from the first edge of the wall. The door’s opening should be the width of the path (the distance between the walls).
 
 ## Add Barriers
+- **Question**: How would you add the barriers?
+    -**Answer**: We make it so that every step in our code makes the barrier pop up randomly in the maze
+   
