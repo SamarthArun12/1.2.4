@@ -11,3 +11,5 @@
 ## Add Doors
 - **Question**: What was the approach to adding walls and doors to the maze?
     - **Answer**: We place the door approximately 10 pixels from the first edge of the wall. The door’s opening should be the width of the path (the distance between the walls).
+
+## Add Barriers
