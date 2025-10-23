@@ -14,5 +14,5 @@
 
 ## Add Barriers
 - **Question**: How would you add the barriers?
-    -**Answer**: We make it so that every step in our code makes the barrier pop up randomly in the maze
+    - **Answer**: We make it so that every step in our code makes the barrier pop up randomly in the maze
    
