@@ -1,4 +1,4 @@
-# 1.2.4
+# 1.2.4 Turtle Escape
 
 ## Make a Maze
 - **Question**: How many walls are present in the squares loop?
