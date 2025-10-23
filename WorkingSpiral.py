@@ -2,12 +2,14 @@ import turtle as trtl
 
 wn = trtl.Screen()
 
-turt = trtl.Turtle()
+maze_drawer = trtl.Turtle()
 dist = 20
-turt.speed(0)
+maze_drawer.speed(0)
 while dist < 600:
-    turt.right(270)
-    turt.forward(dist)
+    maze_drawer.right(270)
+    maze_drawer.forward(dist)
     dist += 20
+maze_drawer.hideturtle()
 
 wn.mainloop()
+
