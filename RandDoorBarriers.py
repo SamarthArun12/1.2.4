@@ -1,4 +1,5 @@
 import turtle as trtl
+import random as rand
 
 wn = trtl.Screen()
 
@@ -19,14 +20,19 @@ def barrier_draw():
     maze_draw.forward(dist*2)
     maze_draw.right(270)
 
+barrier_chance = 10
+door_chance = 10
+
 maze_draw.right(270)
 while steps < 31:
     for i in range(1, steps):
+        door_num = rand.randint(1,101)
+        barrier_num = rand.randint(1,101)
         if i < 4:
             maze_draw.penup()
-        if i % 10 > 5 and i % 10 < 7:
+        if barrier_num < barrier_chance:
             barrier_draw()
-        if i % 10 < 2:
+        if door_num < door_chance:
             maze_draw.penup()
         wall_draw()
     maze_draw.right(270)
