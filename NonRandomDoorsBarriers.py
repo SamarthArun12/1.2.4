@@ -7,8 +7,6 @@ dist = 20
 steps = 2
 maze_draw.pensize(5)
 maze_draw.speed(0)
-maze_draw.right(270)
-maze_draw.forward(dist)
 
 def wall_draw():
     maze_draw.forward(dist)
@@ -21,9 +19,11 @@ def barrier_draw():
     maze_draw.forward(dist*2)
     maze_draw.right(270)
 
-
+maze_draw.right(270)
 while steps < 31:
     for i in range(1, steps):
+        if i < 4:
+            maze_draw.penup()
         if i % 10 > 5 and i % 10 < 7:
             barrier_draw()
         if i % 10 < 2:
