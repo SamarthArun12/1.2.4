@@ -21,7 +21,7 @@ def barrier_draw():
     maze_draw.right(270)
 
 barrier_chance = 10
-door_chance = 10
+door_chance = 5
 
 maze_draw.right(270)
 while steps < 31:
@@ -30,13 +30,18 @@ while steps < 31:
         barrier_num = rand.randint(1,101)
         if i < 4:
             maze_draw.penup()
-        if barrier_num < barrier_chance:
+        if barrier_num < barrier_chance and i % 2 == 0:
             barrier_draw()
         if door_num < door_chance:
             maze_draw.penup()
         wall_draw()
     maze_draw.right(270)
     steps += 1
+
+    if barrier_chance < 50:
+        barrier_chance += 3
+    if door_chance < 25:
+        door_chance += 3
 
 maze_draw.hideturtle()
 
