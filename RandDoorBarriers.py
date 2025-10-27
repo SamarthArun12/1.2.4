@@ -38,10 +38,10 @@ while steps < 31:
     maze_draw.right(270)
     steps += 1
 
-    if barrier_chance < 50:
-        barrier_chance += 3
-    if door_chance < 25:
-        door_chance += 3
+    if barrier_chance < 40:
+        barrier_chance += 2
+    if door_chance < 20:
+        door_chance += 2
 
 maze_draw.hideturtle()
 
