@@ -45,18 +45,36 @@ while steps < 31:
 
 maze_draw.hideturtle()
 
-wn.mainloop()
-
 maze_run = trtl.Turtle()
 
 def up():
     maze_run.setheading(90)
+    
+    maze_run.forward(15)
 
 def down():
     maze_run.setheading(270)
+    maze_run.forward(15)
 
 def right():
     maze_run.setheading(0)
+    maze_run.forward(15)
 
 def left():
     maze_run.setheading(180)
+    maze_run.forward(15)
+
+maze_run.penup()
+maze_run.showturtle()
+maze_run.goto(0,0)
+maze_run.pendown()
+maze_run.pencolor("blue")
+
+wn.onkey(up, "Up")
+wn.onkey(down, "Down")
+wn.onkey(left, "Left")
+wn.onkey(right, "Right")
+wn.listen()
+
+
+wn.mainloop()
