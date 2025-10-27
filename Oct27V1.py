@@ -30,7 +30,7 @@ while steps < 31:
         barrier_num = rand.randint(1,101)
         if i < 4:
             maze_draw.penup()
-        if barrier_num < barrier_chance and i % 4 == 0:
+        if barrier_num < barrier_chance and i % 2 == 0:
             barrier_draw()
         if door_num < door_chance:
             maze_draw.penup()
@@ -46,3 +46,17 @@ while steps < 31:
 maze_draw.hideturtle()
 
 wn.mainloop()
+
+maze_run = trtl.Turtle()
+
+def up():
+    maze_run.setheading(90)
+
+def down():
+    maze_run.setheading(270)
+
+def right():
+    maze_run.setheading(0)
+
+def left():
+    maze_run.setheading(180)
