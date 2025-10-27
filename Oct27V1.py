@@ -70,11 +70,14 @@ maze_run.goto(0,0)
 maze_run.pendown()
 maze_run.pencolor("blue")
 
+timer = 0
+while abs(maze_run.ycor) < 250 or abs(maze_run.xcor) < 250:
+    timer = timer + 1
+
 wn.onkey(up, "Up")
 wn.onkey(down, "Down")
 wn.onkey(left, "Left")
 wn.onkey(right, "Right")
 wn.listen()
-
 
 wn.mainloop()
