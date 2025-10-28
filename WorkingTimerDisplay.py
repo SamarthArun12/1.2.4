@@ -49,49 +49,40 @@ maze_run = trtl.Turtle()
 
 timer = 0
 running = True
+timer_display = trtl.Turtle()
+
+def reset():
+    global timer
+    if abs(maze_run.xcor()) > 280 or abs(maze_run.ycor()) > 280:
+        maze_run.hideturtle()
+        maze_run.penup()
+        maze_run.clear()
+        maze_run.goto(0,0)
+        maze_run.showturtle()
+        maze_run.pendown()
+        timer = 0
+        
 
 def up():
     maze_run.setheading(90)
     maze_run.forward(15)
-    if abs(maze_run.xcor()) > 280 or abs(maze_run.ycor()) > 280:
-        maze_run.hideturtle()
-        maze_run.penup()
-        maze_run.clear()
-        maze_run.goto(0,0)
-        maze_run.showturtle()
-        maze_run.pendown()
+    reset()
 
 def down():
     maze_run.setheading(270)
     maze_run.forward(15)
-    if abs(maze_run.xcor()) > 280 or abs(maze_run.ycor()) > 280:
-        maze_run.hideturtle()
-        maze_run.penup()
-        maze_run.clear()
-        maze_run.goto(0,0)
-        maze_run.showturtle()
-        maze_run.pendown()
+    reset()
+
 def right():
     maze_run.setheading(0)
     maze_run.forward(15)
-    if abs(maze_run.xcor()) > 280 or abs(maze_run.ycor()) > 280:
-        maze_run.hideturtle()
-        maze_run.penup()
-        maze_run.clear()
-        maze_run.goto(0,0)
-        maze_run.showturtle()
-        maze_run.pendown()
+    reset()
 
 def left():
     maze_run.setheading(180)
     maze_run.forward(15)
-    if abs(maze_run.xcor()) > 280 or abs(maze_run.ycor()) > 280:
-        maze_run.hideturtle()
-        maze_run.penup()
-        maze_run.clear()
-        maze_run.goto(0,0)
-        maze_run.showturtle()
-        maze_run.pendown()
+    reset()
+
 def speed():
     maze_run.speed(9)
 
@@ -101,6 +92,8 @@ def global_timer():
         timer += 1
         print(timer) 
         wn.ontimer(global_timer, 1000)
+        timer_display.clear
+        timer_display.write(timer, align="center", font = ("Arial", 16, "normal"))
 
 maze_run.penup()
 maze_run.showturtle()
@@ -115,7 +108,7 @@ wn.onkey(left, "Left")
 wn.onkey(right, "Right")
 wn.onkey(speed, "Shift_L")
 wn.listen() 
-timer = timer + 1
+global_timer()
 
 
 
