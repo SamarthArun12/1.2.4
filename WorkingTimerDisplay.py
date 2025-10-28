@@ -92,7 +92,8 @@ def global_timer():
         timer += 1
         print(timer) 
         wn.ontimer(global_timer, 1000)
-        timer_display.clear
+        timer_display.hideturtle()
+        timer_display.clear()
         timer_display.write(timer, align="center", font = ("Arial", 16, "normal"))
 
 maze_run.penup()
